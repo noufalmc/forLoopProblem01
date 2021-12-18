@@ -2,10 +2,11 @@
 echo "enter Limit"
 read limit;
 harmonic=0;
-res=0;
-numone=1.234
-numtwo=0.124
-total=$((`echo $numone + $numtwo | bc`))    
-echo $total
-res=echo "$numone $numtwo | awk '{print $1/$2}''{print $0}'"
-echo $res;
+total=0;
+echo $myvar;
+for((i=1;$i<$limit;i++))
+do
+res=`echo 1 $i | awk '{print $1/$2 }'`
+total=`echo $total $res | awk '{print $1+$2}'`
+done
+echo "Harmonic value is"$total;

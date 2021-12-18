@@ -1,7 +1,7 @@
 #!/bin/bash 
 echo "enter number"
 read num;
-for((i=2;$i<num/2;i++))
+for((i=2;$i<num;i++))
 do
   prime=0;
   for((j=2;$j<$i;j++))
